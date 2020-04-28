@@ -1,0 +1,57 @@
+{
+  "version": "1.33.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "CloudwatchDashboardStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "CloudwatchDashboardStack.template.json"
+      },
+      "metadata": {
+        "/CloudwatchDashboardStack/test/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "testAF53AC38",
+            "trace": [
+              "new Dashboard (/Users/towfeeque/src/cloudwatch-dashboard/node_modules/@aws-cdk/aws-cloudwatch/lib/dashboard.ts:94:5)",
+              "new CloudwatchDashboardStack (/Users/towfeeque/src/cloudwatch-dashboard/lib/cloudwatch-dashboard-stack.ts:18:23)",
+              "Object.<anonymous> (/Users/towfeeque/src/cloudwatch-dashboard/bin/cloudwatch-dashboard.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/towfeeque/src/cloudwatch-dashboard/node_modules/ts-node/src/index.ts:839:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/towfeeque/src/cloudwatch-dashboard/node_modules/ts-node/src/index.ts:842:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/towfeeque/src/cloudwatch-dashboard/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/towfeeque/src/cloudwatch-dashboard/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/towfeeque/.nvm/versions/node/v12.16.2/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/core": "1.34.1",
+      "@aws-cdk/cx-api": "1.34.1",
+      "@aws-cdk/cloud-assembly-schema": "1.34.1",
+      "@aws-cdk/aws-cloudwatch": "1.34.1",
+      "@aws-cdk/aws-iam": "1.34.1",
+      "@aws-cdk/region-info": "1.34.1",
+      "jsii-runtime": "node.js/v12.16.2"
+    }
+  }
+}

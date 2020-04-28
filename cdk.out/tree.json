@@ -1,0 +1,47 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      "CloudwatchDashboardStack": {
+        "id": "CloudwatchDashboardStack",
+        "path": "CloudwatchDashboardStack",
+        "children": {
+          "test": {
+            "id": "test",
+            "path": "CloudwatchDashboardStack/test",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "CloudwatchDashboardStack/test/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::CloudWatch::Dashboard",
+                  "aws:cdk:cloudformation:props": {
+                    "dashboardBody": {
+                      "Fn::Join": [
+                        "",
+                        [
+                          "{\"widgets\":[{\"type\":\"metric\",\"width\":5,\"height\":5,\"x\":0,\"y\":0,\"properties\":{\"view\":\"timeSeries\",\"region\":\"",
+                          {
+                            "Ref": "AWS::Region"
+                          },
+                          "\",\"yAxis\":{}}}]}"
+                        ]
+                      ]
+                    },
+                    "dashboardName": "EcpApiDashboard"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
